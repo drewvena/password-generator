@@ -1,14 +1,24 @@
 // Assignment code here
-document.getElementById('password')
 
+
+function generatePassword(){
 var input;
 input = Number(prompt ("How many characters? between 8 and 128"))
 var passwordLength = input;
-alert ('you have chosen' + input);
-var charType = prompt ('include which of the following? "lowercase" "uppercase" "numeric" "special characters"');
-alert ('You have chosen' + charType);
-function generatePassword(){
+alert ('you have chosen ' + input);
+var numbers = confirm ("Do you want numbers in your password?");
+alert ('You have chosen ' + numbers);
+var lower = confirm ('Do you want lowercase letters?');
+alert ("You have chosen " + lower);
+var upper = confirm ("Do you want uppercaser letters?");
+alert ("You have chosen " + upper)
+
+var password = {
+  getInput: function
 }
+}
+
+
 
 
 
