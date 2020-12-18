@@ -2,21 +2,17 @@
 
 
 function generatePassword(){
-var input;
-input = Number(prompt ("How many characters? between 8 and 128"))
-var passwordLength = input;
-alert ('you have chosen ' + input);
+var passwordLength = Number(prompt ("How many characters? between 8 and 128"))
+alert ('you have chosen ' + passwordLength);
 var numbers = confirm ("Do you want numbers in your password?");
-alert ('You have chosen ' + numbers);
+alert (`You Have Chosen ${numbers}`);
 var lower = confirm ('Do you want lowercase letters?');
 alert ("You have chosen " + lower);
 var upper = confirm ("Do you want uppercaser letters?");
 alert ("You have chosen " + upper)
-
-var password = {
-  getInput: function
-}
-}
+var special = confirm ("Do you want Special Characters?");
+alert ("You have chosen " + special)
+};
 
 
 
