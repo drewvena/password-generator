@@ -1,39 +1,66 @@
 // Assignment code here
+var specialCharacters = [
+  '@','%','+','\\','/',"'",'!','#','$','^','?',':',')','(','}','{',']','[','~','-','_','.'
+];
 
+var upperCasedCharacters = [
+  'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'
+];
 
+var lowerCasedCharacters = [
+  'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'
+];
+
+var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+var selectedCharacters = [];
 function generatePassword(){
 var passwordLength = prompt ("How many characters? between 8 and 128");
 alert ('you have chosen ' + passwordLength);
-var numbers = confirm ("Do you want numbers in your password?");
-alert (`You Have Chosen ${numbers}`);
-var lower = confirm ('Do you want lowercase letters?');
-alert ("You have chosen " + lower);
-var upper = confirm ("Do you want uppercaser letters?");
-alert ("You have chosen " + upper)
-var special = confirm ("Do you want Special Characters?");
-alert ("You have chosen " + special)
+if (passwordLength < 8 || length > 128) {
+  alert ("length must be between 8 and 128!")
+}
+var LC = confirm("Use Lower case characters?");
+var UC = confirm("Use Upper case characters?");
+var N = confirm("Use Numeric characters?");
+var SC = confirm("Use Special characters?");
 
-var charSet = "";
-if (numbers=true){
-  charSet = "0123456789";
-}
- if(lower =true){
-  charSet="abcdefghijklmnopqrstuvwxyz";
-}  
-if (upper=true){
-  charSet="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-}
-if (special=true){
-  charSet= "!@#$%^&*()_-+=}{[]\`|~?/;:'";
-};
-var value = "";
+if (LC == true || UC == true || N == true || SC == true){
+
+  if (LC == true) {
+    selectedCharacters += lowerCasedCharacters;
+  } else {
+    selectedCharacters=selectedCharacters;
+  }
+
+  if (UC == true) {
+    selectedCharacters += upperCasedCharacters;
+  }else {
+    selectedCharacters=selectedCharacters;
+  }
+
+  if (N == true) {
+    selectedCharacters += numericCharacters;
+  }else {
+    selectedCharacters=selectedCharacters;
+  }
+
+  if (SC == true) {
+    selectedCharacters += specialCharacters;
+  }else {
+    selectedCharacters=selectedCharacters;
+  }
+
+console.log(selectedCharacters);
+var retVal = "";
 for (var i = 0; i < passwordLength; i++) { 
- value += charSet[Math.floor(Math.random()* charSet.length)];
+ retVal += selectedCharacters.charAt(Math.floor(Math.random()* selectedCharacters.length));
 }
-return value;
+return retVal;
 }
-alert(generatePassword()); 
-generatePassword();
+alert(generatePassword());
+}
+
 
 
 
