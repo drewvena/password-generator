@@ -1,6 +1,6 @@
 // Assignment code here
 var specialCharacters = [
-  "@","%","+","/","!","#","$","^","?"];
+  " ","!","#","$","%","^","&","*","(",")","+",",","-",".","/",":",";","<","=",">","?","@","[","]","_","`","~","{","}","|",];
 
 var upperCasedCharacters = [
   'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
@@ -27,25 +27,25 @@ if (lowerCase == true || upperCase ==true || numbers == true || special == true)
   if (lowerCase = true) {
     selectedCharacters += lowerCasedCharacters;
   } else if (lowerCase==false) {
-    selectedCharacters=upperCasedCharacters,specialCharacters,numericCharacters;
+    selectedCharacters+=upperCasedCharacters,specialCharacters,numericCharacters;
   };
 
   if (upperCase = true) {
     selectedCharacters += upperCasedCharacters;
   }else if (upperCase==false){
-    selectedCharacters=lowerCasedCharacters,numericCharacters,specialCharacters;
+    selectedCharacters+=lowerCasedCharacters,numericCharacters,specialCharacters;
   };
 
   if (numbers == true) {
     selectedCharacters += numericCharacters;
   }else if (numbers==false){
-    selectedCharacters=upperCasedCharacters+specialCharacters+upperCasedCharacters;
+    selectedCharacters+=upperCasedCharacters+specialCharacters+upperCasedCharacters;
   };
 
   if (special == true) {
     selectedCharacters += specialCharacters;
   }else if (special==false){
-    selectedCharacters=numericCharacters+=upperCasedCharacters+=lowerCasedCharacters;
+    selectedCharacters+=numericCharacters+=upperCasedCharacters+=lowerCasedCharacters;
   };
   
 
