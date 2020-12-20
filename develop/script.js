@@ -20,32 +20,32 @@ alert ('you have chosen ' + passwordLength);
 if (passwordLength < 8 || length > 128) {
   alert ("length must be between 8 and 128!")
 }
-var LC = confirm("Use Lower case characters?");
-var UC = confirm("Use Upper case characters?");
-var N = confirm("Use Numeric characters?");
-var SC = confirm("Use Special characters?");
+var lowerCase = confirm("Use Lower case characters?");
+var upperCase = confirm("Use Upper case characters?");
+var numbers = confirm("Use Numeric characters?");
+var special = confirm("Use Special characters?");
 
-if (LC == true || UC == true || N == true || SC == true){
+if (lowerCase == true || upperCase == true || numbers == true || special == true){
 
-  if (LC == true) {
+  if (lowerCase = true) {
     selectedCharacters += lowerCasedCharacters;
   } else {
     selectedCharacters=selectedCharacters;
   }
 
-  if (UC == true) {
+  if (upperCase = true) {
     selectedCharacters += upperCasedCharacters;
   }else {
     selectedCharacters=selectedCharacters;
   }
 
-  if (N == true) {
+  if (numbers == true) {
     selectedCharacters += numericCharacters;
   }else {
     selectedCharacters=selectedCharacters;
   }
 
-  if (SC == true) {
+  if (special == true) {
     selectedCharacters += specialCharacters;
   }else {
     selectedCharacters=selectedCharacters;
